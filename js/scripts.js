@@ -4,10 +4,10 @@ var cryptosquare = function(sentence) {
 	var n = 0;
 	var i = 0;
 	var rows = Math.ceil(result.length / columns);
-	var firstSplit = new Array();
+	var firstSplit = [];
 	while(i < rows) {
 		var j = 0;
-		var temp = new Array();
+		var temp = [];
 		while(j < columns) {
 			if(n < result.length) {
 				temp.push(result[n]);
@@ -40,21 +40,20 @@ var cryptosquare = function(sentence) {
 		}
 		columnIndex++;
 	}
-
 	var imploded_string = encryptedString.replace(/[^A-Za-z]/g, "");
     return imploded_string.match(/.{1,5}/g);
 };
 
 // $(document).ready(function () {
 // 	$("form#factorial").submit(function(event) {
-		
+
 // 		var n = parseInt($("input#n").val());
 // 		var answer = factorial(n);
-		
+
 // 		$(".n").text(n);
 // 		$(".answer").text(answer);
 
-		
+
 // 		$("#result").show();
 // 		event.preventDefault();
 // 	});
