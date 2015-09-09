@@ -50,17 +50,19 @@ var cryptosquare = function(sentence) {
 	return imploded_string.match(/.{1,5}/g);
 };
 
-// $(document).ready(function () {
-// 	$("form#factorial").submit(function(event) {
+$(document).ready(function () {
+	$("form#encryption").submit(function(event) {
 
-// 		var n = parseInt($("input#n").val());
-// 		var answer = factorial(n);
+		var message = $("input#message").val();
+		var encrypted_array = cryptosquare(message);
+		var encrypted_string = encrypted_array.toString();
+		var encrypted = encrypted_string.replace(/[^A-Za-z]/g, " ");
+		
+		$(".message").text(message);
+		$(".encrypted").text(encrypted);
 
-// 		$(".n").text(n);
-// 		$(".answer").text(answer);
-
-
-// 		$("#result").show();
-// 		event.preventDefault();
-// 	});
-// });
+		
+		$("#result").show();
+		event.preventDefault();
+	});
+});
