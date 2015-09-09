@@ -9,7 +9,7 @@ var cryptosquare = function(sentence) {
 		var j = 0;
 		var temp = new Array();
 		while(j < columns) {
-			if(n < result.length) { 
+			if(n < result.length) {
 				temp.push(result[n]);
 			}
 			j++;
@@ -18,16 +18,16 @@ var cryptosquare = function(sentence) {
 		firstSplit.push(temp);
 		i++;
 	}
-	
+
 	var last_index = firstSplit.length - 1;
-	
+
 	if (firstSplit[last_index].length < columns) {
 		while (firstSplit[last_index].length < columns) {
 			firstSplit[last_index].push("!");
 		}
 	}
-	
-	
+
+
 	var encryptedString = "";
 	var columnIndex = 0;
 	while(columnIndex < columns) {
@@ -40,8 +40,9 @@ var cryptosquare = function(sentence) {
 		}
 		columnIndex++;
 	}
-	
-	return encryptedString.replace(/[^A-Za-z]/g, "");
+
+	var imploded_string = encryptedString.replace(/[^A-Za-z]/g, "");
+    return imploded_string.match(/.{1,5}/g);
 };
 
 // $(document).ready(function () {
