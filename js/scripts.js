@@ -19,6 +19,14 @@ var cryptosquare = function(sentence) {
 		i++;
 	}
 	
+	var last_index = firstSplit.length - 1;
+	
+	if (firstSplit[last_index].length < columns) {
+		while (firstSplit[last_index].length < columns) {
+			firstSplit[last_index].push("!");
+		}
+	}
+	
 	
 	var encryptedString = "";
 	var columnIndex = 0;
@@ -33,7 +41,7 @@ var cryptosquare = function(sentence) {
 		columnIndex++;
 	}
 	
-	return encryptedString;
+	return encryptedString.replace(/[^A-Za-z]/g, "");
 };
 
 // $(document).ready(function () {

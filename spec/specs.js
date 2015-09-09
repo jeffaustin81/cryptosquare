@@ -7,6 +7,6 @@ describe('cryptosquare', function() {
 	// 	expect(cryptosquare("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis feugiat a tellus bibendum rhoncus.")).to.equal("loremipsumdolorsitametconsecteturadipiscingelitduisfeugiatatellusbibendumrhoncus");	
 	// });	
 	it("takes a string an encryption", function() {
-		expect(cryptosquare("don't compare yourself to others, compare yourself to the person you were yesterday")).to.equal("drfcuhotoetoreuenyomspwrtoopeeedcutalrramrhrfseymseetoyperyonealsotys");	
+		expect(cryptosquare("don't compare yourself to others, compare yourself to the person you were yesterday")).to.equal("drfcuhotoetoreuenyomspwrtoopeeedcutalrraorhrfseymseetoyperyonealsotys");	
 	});	
 });
