@@ -1,3 +1,11 @@
 #result {
 	display: none;
 }
+body {
+	color: #fff;
+	background: url(http://h.fastcompany.net/multisite_files/fastcompany/imagecache/1280/poster/2013/11/3022454-poster-rszcode.jpg);
+}
+
+#message {
+	color: #000;
+}
